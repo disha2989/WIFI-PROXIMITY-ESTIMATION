@@ -24,6 +24,7 @@ This project provides a set of lightweight, C-based user-space tools to estimate
 ## Tool Descriptions
 
 ### rssi_distance
+Estimates distance using average RSSI values based on the log-distance path loss model. It parses the average RSSI value for each station from `iw dev phy0-ap0 station dump` output, polls this value for 10s to get the average RSSI and estimates the distance of that connected station.
 
 ```
 root@OpenWrt:~# ./rssi_distance 
@@ -41,7 +42,7 @@ ea:ba:d6:08:cb:2d     -41           5.01
 ```
 
 ### snr_distance
-
+Uses both RSSI and noise floor to compute SNR. Using this SNR, it adjusts the path-loss exponent dynamically to estimate distance with better accuracy compared to `rssi_distance` in noisy environments.
 ```
 root@OpenWrt:~# ./snr_distance 
 
@@ -60,7 +61,7 @@ ea:ba:d6:08:cb:2d     -40        49     4.89
 ```
 
 ### rtt_distance
-
+Measures RTT (ICMP ping-based round-trip time) to the stations. It applies a speed-of-light propagation model to estimate the relative distance of two stations. Note: RTT here includes multiple layers of delay, unlike the higher-precision FTM RTT in 802.11mc.
 ```
 root@OpenWrt:~# ./rtt_distance 
 
