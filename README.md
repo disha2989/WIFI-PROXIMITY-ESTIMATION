@@ -13,8 +13,44 @@ rtt_distance.c # It measures RTT (ICMP ping-based round-trip time) to the statio
 
 -> bin # Output directory for cross-compiled binaries
 rssi_distance:
+
+root@OpenWrt:~# ./rssi_distance 
+Collecting signal data from connected stations...
+
+MAC Address          Avg RSSI     Distance (m)
+---------------------------------------------------
+28:6b:35:a4:87:56    -33          2.71      
+e2:9c:c9:54:f0:84    -38          3.98      
+ea:ba:d6:08:cb:2d    -41          5.01      
+9e:38:29:60:b3:98    -36          3.41      
+18:02:ae:62:0c:4b    -61          23.26     
+74:a6:cd:d5:14:bd    -37          3.69
+
 snr_distance:
+
+root@OpenWrt:~# ./snr_distance 
+Using noise floor: -89 dBm
+Sampling RSSI data...
+
+MAC Address          Avg RSSI   SNR    Distance (m)
+---------------------------------------------------------------
+28:6b:35:a4:87:56    -33        56     3.03      
+e2:9c:c9:54:f0:84    -34        55     3.30      
+ea:ba:d6:08:cb:2d    -40        49     4.89      
+9e:38:29:60:b3:98    -35        54     3.59      
+18:02:ae:62:0c:4b    -59        30     18.12     
+74:a6:cd:d5:14:bd    -38        51     4.64
+
 rtt_distance:
+
+Measuring RTTs using ICMP...
+
+IP: 192.168.1.238 | Median RTT: 10130.00 us 
+IP: 192.168.1.163 | Median RTT: 3487.00 us 
+
+--- Relative Distance Estimation ---
+IP: 192.168.1.238 | Relative Distance: 2.91
+IP: 192.168.1.163 | Relative Distance: 1.00
 
 -> openwrt-sdk* # OpenWRT SDK that is used for cross-compilation. I have compiled these binaries on my local Ubuntu machine and transfered the binaries to the OpenWRT router.
 
