@@ -17,4 +17,6 @@ snr_distance:
 rtt_distance:
 
 -> openwrt-sdk* # OpenWRT SDK that is used for cross-compilation. I have compiled these binaries on my local Ubuntu machine and transfered the binaries to the OpenWRT router.
+Download the appropriate OpenWRT SDK for your router architecture from [OpenWRT SDK Downloads](https://downloads.openwrt.org/), then extract it using `tar -xJf <sdk-file>.tar.zst`.
+
 -> Makefile # Build script to cross-compile the src files and copy the binaries to the OpenWRT router
