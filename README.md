@@ -74,6 +74,11 @@ IP: 192.168.1.163 | Median RTT: 3487.00 µs
 IP: 192.168.1.238 | Relative Distance: 2.91
 IP: 192.168.1.163 | Relative Distance: 1.00
 ```
+### -> openwrt-sdk*
+OpenWRT SDK is used for cross-compilation. These binaries were compiled on a local Ubuntu machine and transferred to the OpenWRT router.
+
+**SDK used based on my openWRT router's and Linux machine's architecture:**  
+`openwrt-sdk-23.05.5-mediatek-filogic_gcc-12.3.0_musl.Linux-x86_64`
 
 ## Setup: Cross-Compilation with OpenWRT SDK
 
