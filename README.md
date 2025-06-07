@@ -104,6 +104,8 @@ OpenWRT SDK is used for cross-compilation. These binaries were compiled on a loc
    ```bash
    chmod +x rssi_distance
    ./rssi_distance
+   ./snr_distance
+   ./rtt_distance
    ```
 
 ---
