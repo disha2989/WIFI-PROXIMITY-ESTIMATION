@@ -15,6 +15,7 @@ rtt_distance.c # It measures RTT (ICMP ping-based round-trip time) to the statio
 rssi_distance:
 
 root@OpenWrt:~# ./rssi_distance 
+
 Collecting signal data from connected stations...
 
 MAC Address          Avg RSSI     Distance (m)
@@ -29,7 +30,9 @@ ea:ba:d6:08:cb:2d    -41          5.01
 snr_distance:
 
 root@OpenWrt:~# ./snr_distance 
+
 Using noise floor: -89 dBm
+
 Sampling RSSI data...
 
 MAC Address          Avg RSSI   SNR    Distance (m)
