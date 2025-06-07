@@ -18,7 +18,7 @@ root@OpenWrt:~# ./rssi_distance
 Collecting signal data from connected stations...
 
 MAC Address          Avg RSSI     Distance (m)
----------------------------------------------------
+
 28:6b:35:a4:87:56    -33          2.71      
 e2:9c:c9:54:f0:84    -38          3.98      
 ea:ba:d6:08:cb:2d    -41          5.01      
@@ -33,7 +33,7 @@ Using noise floor: -89 dBm
 Sampling RSSI data...
 
 MAC Address          Avg RSSI   SNR    Distance (m)
----------------------------------------------------------------
+
 28:6b:35:a4:87:56    -33        56     3.03      
 e2:9c:c9:54:f0:84    -34        55     3.30      
 ea:ba:d6:08:cb:2d    -40        49     4.89      
